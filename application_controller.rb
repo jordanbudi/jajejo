@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/results' do
-    @results=MadLib.new
+    @results=MadLib.new(params)
     erb :results
   end
 
