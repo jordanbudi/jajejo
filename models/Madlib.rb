@@ -3,22 +3,29 @@
 #q2 = dinner with 1 person and decides restaurant
 #q3 = who would you trusdt with your first-born child and decides activity
 #q4 = best computer program ever written would be and decides event
-Class MadLib
-attr_reader :car, :extremity, :pungent_scent, :incredible_adjective, :food_choice, :drink_choice, :other_celeb, :crazy_transportation, :romantic_music
-
-male_celeb = ["Bradley Cooper", "Thor", "Will Ferrel", "Kanye West"]
-female_celeb =  ["Natalie Portman", "Bjork", "Kerry Washington", "Catwoman"]
-restaurant = ["Momma's home cooking", "Olive Garden", "Dinner Under the Eiffel Tower", "Elon Musk Serving caviar in Space"]
-activity = ["Gondola in Venice", "International Banana Museum", "Dessert in a Helicopter Ride served by Monkey Butlers", "Mining for Diamonds in South Africa"]
-event = ["Dan Bilzerian rides Ostrich through your date, hunting alligators", "Beyonce and Rachel Dolezal engage in a heated fencing match for the last scene in the newest Hunger Games", "The most interesting man in the world paratroops from his private helicopter into a yacht escorted by ninja monkeys", "Michelle Obama drives through your date on a unicorn, chasing off the expedia gnome with her laser vision" ]
+class MadLib
+attr_reader :car, :extremity, :pungent_scent, :incredible_adjective, :food_choice, :drink_choice, :other_celeb, :crazy_transportation, :romantic_music, :celeb, :activity, :restaurant, :event, :restaurant_chef, :food_adjective
 
 
-  def initialize(answers)
-    @choice = choice
-    @q1 = q1
-    @q2 = q2
-    @q3 = q3
-    @q4 = q4
+  def initialize
+    @male_celeb = ["Bradley Cooper", "Thor", "Will Ferrel", "Kanye West"]
+@female_celeb =  ["Natalie Portman", "Bjork", "Kerry Washington", "Catwoman"]
+@restaurant = ["Momma's home cooking", "Olive Garden", "Dinner Under the Eiffel Tower", "Elon Musk Serving caviar in Space"]
+@activity = ["Gondola in Venice", "International Banana Museum", "Dessert in a Helicopter Ride served by Monkey Butlers", "Mining for Diamonds in South Africa"]
+@event = ["Dan Bilzerian rides Ostrich through your date, hunting alligators", "Beyonce and Rachel Dolezal engage in a heated fencing match for the last scene in the newest Hunger Games", "The most interesting man in the world paratroops from his private helicopter into a yacht escorted by ninja monkeys", "Michelle Obama drives through your date on a unicorn, chasing off the expedia gnome with her laser vision" ]
+
+
+    # @choice = choice
+    # @q1 = q1
+    # @q2 = q2
+    # @q3 = q3
+    # @q4 = q4
+    @activity = @activity.sample
+    @restaurant = @restaurant.sample
+    @event = @event.sample
+    @restaurant_chef = "chef boy ar di"
+    @celeb = "Kim Kardashian"
+    @food_adjective = "tasty"
     @car = "bugatti"
     @extremity = "nose"
     @pungent_scent = "onion"
@@ -88,7 +95,7 @@ event = ["Dan Bilzerian rides Ostrich through your date, hunting alligators", "B
     end
   end
 
-  end
+  
 
   def picks
     @restaurant = restaurant.sample
@@ -96,3 +103,4 @@ event = ["Dan Bilzerian rides Ostrich through your date, hunting alligators", "B
     @event = event.sample
   end
 end
+
