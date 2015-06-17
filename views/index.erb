@@ -8,7 +8,7 @@
   
   <body>
     <h1>MadLib in Love</h1>
-
+    <div class="wrapper">
     <form method="POST" action="/results">
       
       First Name: 
@@ -16,8 +16,13 @@
       Last Name: 
       <input type="text" name="last_name">
       <br>
+      I am a:
       <input type="radio" name="gender" value="male">Male
       <input type="radio" name="gender" value="female">Female
+      <br>
+      Attempting to Woo a:
+      <input type="radio" name="gender_seek" value="male">Male
+      <input type="radio" name="gender_seek" value="female">Female
       <br>
       Question 1: Who would you most trust with your firstborn child?
       <br>
@@ -48,7 +53,7 @@
       <input type="radio" name="q4" value="4">D
       <br>
       <input type="submit" value="Find my Dream Date!">
-
+    </div>
     </form>  
   </body>
 </html>
