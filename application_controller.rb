@@ -1,6 +1,5 @@
 #shotgun -p 3000 -o 0.0.0.0
 require 'bundler'
-require 'Sinatra'
 Bundler.require
 require_relative 'models/Madlib.rb'
 
